@@ -1,10 +1,13 @@
 package it.iad.relazioni.service.impl;
 
 import it.iad.relazioni.model.Alunno;
+import it.iad.relazioni.model.Aula;
 import it.iad.relazioni.model.Merenda;
 import it.iad.relazioni.repository.AlunnoRepository;
+import it.iad.relazioni.repository.AulaRepository;
 import it.iad.relazioni.repository.MerendaRepository;
 import it.iad.relazioni.service.RelazioniService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +17,14 @@ public class RelazioniServiceImpl implements RelazioniService {
     @Autowired
     AlunnoRepository alunnoRepository;
     @Autowired
+    AulaRepository aulaRepository;
+    @Autowired
     MerendaRepository merendaRepository;
 
     @Override
     public void genera() {
         alunnoRepository.deleteAllInBatch();
+        aulaRepository.deleteAllInBatch();
         merendaRepository.deleteAllInBatch();
 
         Alunno alu1 = new Alunno("Mario");
@@ -49,19 +55,36 @@ public class RelazioniServiceImpl implements RelazioniService {
         m3.setAlunno(alu3);
         merendaRepository.save(m3);
         System.out.println("----------------------");
-        
+
         // recupero merenda da alu2
         Alunno alx = alunnoRepository.getOne(alu2.getId());
         Merenda mx = alx.getMerenda();
         System.out.println(alx);
         System.out.println(mx);
         System.out.println("----------------------");
-        
+
         // recupero alunno da m3
         Merenda mex = merendaRepository.getOne(m3.getId());
         Alunno ax = mex.getAlunno();
         System.out.println(mex);
         System.out.println(ax);
+
+        // creo due aule
+        Aula a1 = new Aula("VA");
+        Aula a2 = new Aula("VB");
+        a1 = aulaRepository.save(a1);
+        a2 = aulaRepository.save(a2);
+
+        // associo gli alunni alle aule
+        a1.setAlunni(null);
+        List<Alunno> lx = a1.getAlunni();
+        lx.add(alu1);
+        lx.add(alu2);
+        aulaRepository.save(a1);
+        alu1.setAula(a1);
+        alu2.setAula(a1);
+        alunnoRepository.save(alu1);
+        alunnoRepository.save(alu2);
     }
 
 }

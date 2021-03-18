@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,6 +21,10 @@ public class Alunno {
     @OneToOne
     @JoinColumn(referencedColumnName = "id")
     private Merenda merenda;
+    
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id")
+    private Aula aula;
 
     public Alunno() {
     }
@@ -50,6 +55,14 @@ public class Alunno {
 
     public void setMerenda(Merenda merenda) {
         this.merenda = merenda;
+    }
+
+    public Aula getAula() {
+        return aula;
+    }
+
+    public void setAula(Aula aula) {
+        this.aula = aula;
     }
 
     @Override

@@ -551,3 +551,593 @@ java.util.NoSuchElementException: No value present
 2021-03-18 17:05:29.997 TRACE 11620 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [42]
 2021-03-18 17:05:29.997 TRACE 11620 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Gino]
 2021-03-18 17:05:29.997 TRACE 11620 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [39]
+2021-03-18 17:36:09.956 DEBUG 13604 --- [main] org.hibernate.SQL                        : alter table alunno add column aula_id bigint
+2021-03-18 17:36:09.990 DEBUG 13604 --- [main] org.hibernate.SQL                        : create table aula (id bigint not null, codice varchar(255), primary key (id)) engine=InnoDB
+2021-03-18 17:36:10.106 DEBUG 13604 --- [main] org.hibernate.SQL                        : alter table alunno add constraint FKab0xa93o783jgt3ojhejvh4wh foreign key (aula_id) references aula (id)
+2021-03-18 17:36:10.662  WARN 13604 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:36:18.623 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:36:18.639 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:36:18.656 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.657 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.680 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:36:18.683 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.683 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:36:18.684 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:36:18.685 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [43]
+2021-03-18 17:36:18.694 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.695 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.701 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:36:18.702 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.703 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:36:18.703 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:36:18.703 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [44]
+2021-03-18 17:36:18.709 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.710 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.715 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:36:18.716 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.716 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:36:18.717 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:36:18.717 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [45]
+2021-03-18 17:36:18.728 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.730 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.735 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:36:18.736 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:36:18.736 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [46]
+2021-03-18 17:36:18.743 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.744 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.750 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:36:18.751 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:36:18.751 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [47]
+2021-03-18 17:36:18.757 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.758 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.768 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:36:18.769 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:36:18.769 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [48]
+2021-03-18 17:36:18.784 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:36:18.785 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.785 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [46]
+2021-03-18 17:36:18.786 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:36:18.786 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [43]
+2021-03-18 17:36:18.800 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:36:18.800 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.800 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [47]
+2021-03-18 17:36:18.801 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:36:18.801 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [44]
+2021-03-18 17:36:18.813 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:36:18.814 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:36:18.814 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [48]
+2021-03-18 17:36:18.814 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:36:18.814 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [45]
+2021-03-18 17:36:18.833 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.834 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.843 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:36:18.845 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:36:18.846 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [49]
+2021-03-18 17:36:18.854 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:36:18.855 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:36:18.860 DEBUG 13604 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:36:18.861 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:36:18.862 TRACE 13604 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [50]
+2021-03-18 17:36:18.879 ERROR 13604 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at it.iad.relazioni.service.impl.RelazioniServiceImpl.genera(RelazioniServiceImpl.java:79) ~[classes/:na]
+	at it.iad.relazioni.controller.RelazioniController.genera(RelazioniController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-18 17:38:31.002  WARN 10824 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:38:34.418 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:38:34.433 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:38:34.450 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.452 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.472 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:38:34.475 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.475 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:38:34.476 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:38:34.477 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [51]
+2021-03-18 17:38:34.484 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.485 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.490 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:38:34.490 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.490 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:38:34.491 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:38:34.491 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [52]
+2021-03-18 17:38:34.496 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.497 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.502 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:38:34.503 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.503 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:38:34.503 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:38:34.503 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [53]
+2021-03-18 17:38:34.512 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.513 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.518 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:38:34.518 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:38:34.519 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [54]
+2021-03-18 17:38:34.524 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.525 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.575 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:38:34.576 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:38:34.577 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [55]
+2021-03-18 17:38:34.582 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.583 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.587 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:38:34.588 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:38:34.588 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [56]
+2021-03-18 17:38:34.597 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:38:34.597 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.597 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [54]
+2021-03-18 17:38:34.597 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:38:34.597 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [51]
+2021-03-18 17:38:34.606 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:38:34.606 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.607 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [55]
+2021-03-18 17:38:34.607 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:38:34.607 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [52]
+2021-03-18 17:38:34.613 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:38:34.613 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:38:34.613 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [56]
+2021-03-18 17:38:34.614 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:38:34.614 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [53]
+2021-03-18 17:38:34.633 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.635 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.648 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:38:34.649 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:38:34.649 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [57]
+2021-03-18 17:38:34.658 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:38:34.659 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:38:34.664 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:38:34.664 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:38:34.665 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [58]
+2021-03-18 17:38:34.678 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:38:34.679 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [57]
+2021-03-18 17:38:34.679 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [54]
+2021-03-18 17:38:34.679 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:38:34.679 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [51]
+2021-03-18 17:38:34.680 DEBUG 10824 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:38:34.681 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [57]
+2021-03-18 17:38:34.681 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [55]
+2021-03-18 17:38:34.681 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:38:34.681 TRACE 10824 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [52]
+2021-03-18 17:41:01.297  WARN 1572 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:41:05.445 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:41:05.459 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from aula
+2021-03-18 17:41:05.465 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:41:05.477 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.478 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.496 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:41:05.500 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.500 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:41:05.501 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:41:05.501 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [59]
+2021-03-18 17:41:05.506 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.507 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.511 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:41:05.512 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.512 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:41:05.513 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:41:05.513 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [60]
+2021-03-18 17:41:05.518 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.519 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.522 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:41:05.523 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.523 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:41:05.523 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:41:05.523 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [61]
+2021-03-18 17:41:05.529 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.529 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.532 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:41:05.533 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:41:05.533 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [62]
+2021-03-18 17:41:05.536 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.537 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.540 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:41:05.541 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:41:05.541 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [63]
+2021-03-18 17:41:05.544 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.545 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.549 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:41:05.549 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:41:05.549 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [64]
+2021-03-18 17:41:05.555 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:41:05.556 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.556 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [62]
+2021-03-18 17:41:05.556 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:41:05.556 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [59]
+2021-03-18 17:41:05.562 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:41:05.562 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.562 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [63]
+2021-03-18 17:41:05.562 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:41:05.563 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [60]
+2021-03-18 17:41:05.567 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:41:05.568 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:41:05.568 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [64]
+2021-03-18 17:41:05.568 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:41:05.568 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [61]
+2021-03-18 17:41:05.582 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.583 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.593 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:41:05.593 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:41:05.594 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [65]
+2021-03-18 17:41:05.599 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:41:05.600 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:41:05.604 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:41:05.604 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:41:05.605 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [66]
+2021-03-18 17:41:05.614 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:41:05.614 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [65]
+2021-03-18 17:41:05.615 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [62]
+2021-03-18 17:41:05.615 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:41:05.615 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [59]
+2021-03-18 17:41:05.616 DEBUG 1572 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:41:05.616 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [65]
+2021-03-18 17:41:05.616 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [63]
+2021-03-18 17:41:05.617 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:41:05.617 TRACE 1572 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [60]
+2021-03-18 17:43:12.773  WARN 8284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:43:16.716 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:43:16.732 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from aula
+2021-03-18 17:43:16.740 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:43:16.756 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.758 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.779 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:43:16.782 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.782 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:43:16.783 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:43:16.783 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [67]
+2021-03-18 17:43:16.788 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.789 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.793 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:43:16.794 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.794 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:43:16.794 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:43:16.794 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [68]
+2021-03-18 17:43:16.799 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.799 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.803 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:43:16.803 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.804 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:43:16.804 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:43:16.804 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [69]
+2021-03-18 17:43:16.812 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.813 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.818 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:43:16.818 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:43:16.819 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [70]
+2021-03-18 17:43:16.861 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.862 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.866 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:43:16.867 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:43:16.867 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [71]
+2021-03-18 17:43:16.871 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.872 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.877 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:43:16.877 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:43:16.877 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [72]
+2021-03-18 17:43:16.886 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:43:16.886 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.886 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [70]
+2021-03-18 17:43:16.886 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:43:16.887 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [67]
+2021-03-18 17:43:16.893 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:43:16.894 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.894 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [71]
+2021-03-18 17:43:16.894 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:43:16.894 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [68]
+2021-03-18 17:43:16.900 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:43:16.901 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:43:16.901 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [72]
+2021-03-18 17:43:16.901 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:43:16.901 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [69]
+2021-03-18 17:43:16.916 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.917 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.933 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:43:16.933 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:43:16.934 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [73]
+2021-03-18 17:43:16.942 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:43:16.943 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:43:16.948 DEBUG 8284 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:43:16.948 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:43:16.949 TRACE 8284 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [74]
+2021-03-18 17:43:16.961 ERROR 8284 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at it.iad.relazioni.service.impl.RelazioniServiceImpl.genera(RelazioniServiceImpl.java:81) ~[classes/:na]
+	at it.iad.relazioni.controller.RelazioniController.genera(RelazioniController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-18 17:47:30.891  WARN 14268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:47:34.020 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:47:34.040 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from aula
+2021-03-18 17:47:34.049 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:47:34.068 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.069 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.092 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:47:34.094 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.095 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:47:34.096 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:47:34.096 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [75]
+2021-03-18 17:47:34.104 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.105 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.110 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:47:34.111 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.112 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:47:34.112 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:47:34.113 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [76]
+2021-03-18 17:47:34.121 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.122 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.127 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:47:34.128 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.128 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:47:34.128 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:47:34.128 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [77]
+2021-03-18 17:47:34.137 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.138 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.143 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:47:34.143 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:47:34.144 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [78]
+2021-03-18 17:47:34.148 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.149 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.155 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:47:34.155 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:47:34.155 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [79]
+2021-03-18 17:47:34.161 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.162 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.168 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:47:34.169 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:47:34.169 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [80]
+2021-03-18 17:47:34.178 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:47:34.179 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.179 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [78]
+2021-03-18 17:47:34.179 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:47:34.179 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [75]
+2021-03-18 17:47:34.188 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:47:34.189 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.190 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [79]
+2021-03-18 17:47:34.190 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:47:34.190 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [76]
+2021-03-18 17:47:34.199 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:47:34.200 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:47:34.200 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [80]
+2021-03-18 17:47:34.200 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:47:34.201 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [77]
+2021-03-18 17:47:34.294 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.295 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.339 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:47:34.339 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:47:34.339 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [81]
+2021-03-18 17:47:34.381 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:47:34.383 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:47:34.389 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:47:34.389 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:47:34.390 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [82]
+2021-03-18 17:47:34.407 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:47:34.407 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [81]
+2021-03-18 17:47:34.408 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [78]
+2021-03-18 17:47:34.408 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:47:34.408 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [75]
+2021-03-18 17:47:34.409 DEBUG 14268 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:47:34.409 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [81]
+2021-03-18 17:47:34.410 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [79]
+2021-03-18 17:47:34.410 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:47:34.410 TRACE 14268 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [76]
+2021-03-18 17:50:57.226  WARN 16968 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-18 17:51:00.613 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from alunno
+2021-03-18 17:51:00.632 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from aula
+2021-03-18 17:51:00.640 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from merenda
+2021-03-18 17:51:00.659 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.660 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.681 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:51:00.684 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.684 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:51:00.685 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:51:00.686 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [83]
+2021-03-18 17:51:00.692 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.693 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.696 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:51:00.697 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.697 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:51:00.698 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:51:00.698 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [84]
+2021-03-18 17:51:00.702 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.703 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.705 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into alunno (aula_id, merenda_id, nome, id) values (?, ?, ?, ?)
+2021-03-18 17:51:00.706 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.706 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2021-03-18 17:51:00.707 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:51:00.707 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [85]
+2021-03-18 17:51:00.714 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.714 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.717 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:51:00.718 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pizza]
+2021-03-18 17:51:00.718 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [86]
+2021-03-18 17:51:00.721 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.722 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.725 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:51:00.726 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hamburger]
+2021-03-18 17:51:00.726 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [87]
+2021-03-18 17:51:00.730 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.731 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.735 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into merenda (descrizione, id) values (?, ?)
+2021-03-18 17:51:00.735 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Cozze]
+2021-03-18 17:51:00.735 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [88]
+2021-03-18 17:51:00.742 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:51:00.743 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.743 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [86]
+2021-03-18 17:51:00.743 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
+2021-03-18 17:51:00.743 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [83]
+2021-03-18 17:51:00.749 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:51:00.750 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.750 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [87]
+2021-03-18 17:51:00.750 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisa]
+2021-03-18 17:51:00.750 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [84]
+2021-03-18 17:51:00.755 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update alunno set aula_id=?, merenda_id=?, nome=? where id=?
+2021-03-18 17:51:00.756 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-03-18 17:51:00.756 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [88]
+2021-03-18 17:51:00.756 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Gino]
+2021-03-18 17:51:00.756 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [85]
+2021-03-18 17:51:00.772 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.773 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.779 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:51:00.779 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VA]
+2021-03-18 17:51:00.779 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [89]
+2021-03-18 17:51:00.783 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-18 17:51:00.784 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-18 17:51:00.788 DEBUG 16968 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into aula (codice, id) values (?, ?)
+2021-03-18 17:51:00.788 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [VB]
+2021-03-18 17:51:00.789 TRACE 16968 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [90]
+2021-03-18 17:51:00.798 ERROR 16968 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException] with root cause
+
+java.lang.IllegalArgumentException: null
+	at it.iad.relazioni.model.Aula.setAlunni(Aula.java:58) ~[classes/:na]
+	at it.iad.relazioni.service.impl.RelazioniServiceImpl.genera(RelazioniServiceImpl.java:79) ~[classes/:na]
+	at it.iad.relazioni.controller.RelazioniController.genera(RelazioniController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
