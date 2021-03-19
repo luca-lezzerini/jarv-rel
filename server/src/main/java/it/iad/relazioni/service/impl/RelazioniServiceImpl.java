@@ -2,12 +2,15 @@ package it.iad.relazioni.service.impl;
 
 import it.iad.relazioni.model.Alunno;
 import it.iad.relazioni.model.Aula;
+import it.iad.relazioni.model.Docente;
 import it.iad.relazioni.model.Merenda;
 import it.iad.relazioni.repository.AlunnoRepository;
 import it.iad.relazioni.repository.AulaRepository;
+import it.iad.relazioni.repository.DocenteRepository;
 import it.iad.relazioni.repository.MerendaRepository;
 import it.iad.relazioni.service.RelazioniService;
 import java.util.List;
+import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +23,12 @@ public class RelazioniServiceImpl implements RelazioniService {
     AulaRepository aulaRepository;
     @Autowired
     MerendaRepository merendaRepository;
+    @Autowired
+    DocenteRepository docenteRepository;
 
     @Override
     public void genera() {
+        docenteRepository.deleteAll();
         alunnoRepository.deleteAllInBatch();
         aulaRepository.deleteAllInBatch();
         merendaRepository.deleteAllInBatch();
@@ -40,6 +46,18 @@ public class RelazioniServiceImpl implements RelazioniService {
         m1 = merendaRepository.save(m1);
         m2 = merendaRepository.save(m2);
         m3 = merendaRepository.save(m3);
+
+        Docente d1 = new Docente("Luca", "Lezzerini");
+        Docente d2 = new Docente("Marie", "Curie");
+        Docente d3 = new Docente("Albert", "Einstein");
+        d1 = docenteRepository.save(d1);
+        d2 = docenteRepository.save(d2);
+        d3 = docenteRepository.save(d3);
+
+        // associo alunni e docenti: a1,a2 -> d1; a1, a2, a3 -> d2; a2,a3 -> d3
+        associaDocenteAlunni(d1, alu1, alu2);
+        associaDocenteAlunni(d2, alu1, alu2, alu3);
+        associaDocenteAlunni(d3, alu2, alu3);
 
         // associo alunni e merende
         alu1.setMerenda(m1);
@@ -85,6 +103,39 @@ public class RelazioniServiceImpl implements RelazioniService {
         alu2.setAula(a1);
         alunnoRepository.save(alu1);
         alunnoRepository.save(alu2);
+
+        // recupero tutti gli alunni e, per ognuno, stampo tutti i suoi docenti
+        List<Alunno> lalu = alunnoRepository.findAll();
+//        for (Alunno alu : lalu) {
+        lalu.forEach(a -> {
+            System.out.println("Alunno: " + a.getNome());
+            Set<Docente> docs = a.getDocenti();
+            docs.forEach(d -> System.out.println("\t\t Docente: " + d.getCognome()));
+        });
+
+        // recupero tutti i docenti e stampare gli alunni di ciascuno
+        List<Docente> ld = docenteRepository.findAll();
+        ld.forEach(d -> {
+            System.out.println("Docente: " + d.getCognome());
+//            Set<Alunno> alus = d.getAlunni();
+//            alus.forEach(a -> {
+//                System.out.println("\t\t Alunno: " + a.getNome());
+//            });
+            d.getAlunni().forEach(a -> System.out.println("\t\t Alunno: " + a.getNome()));
+        });
+    }
+
+    private void associaDocenteAlunni(Docente d, Alunno... a) {
+        Set<Alunno> sa = d.getAlunni();
+        for (Alunno alu : a) {
+            sa.add(alu);
+        }
+        docenteRepository.save(d);
+        for (Alunno alu : a) {
+            Set<Docente> sd = alu.getDocenti();
+            sd.add(d);
+            alunnoRepository.save(alu);
+        }
     }
 
 }

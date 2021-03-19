@@ -1,10 +1,13 @@
 package it.iad.relazioni.model;
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
@@ -21,10 +24,13 @@ public class Alunno {
     @OneToOne
     @JoinColumn(referencedColumnName = "id")
     private Merenda merenda;
-    
+
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Aula aula;
+
+    @ManyToMany(mappedBy = "alunni")
+    private Set<Docente> docenti;
 
     public Alunno() {
     }
@@ -63,6 +69,17 @@ public class Alunno {
 
     public void setAula(Aula aula) {
         this.aula = aula;
+    }
+
+    public Set<Docente> getDocenti() {
+        if (docenti == null) {
+            docenti = new HashSet<>();
+        }
+        return docenti;
+    }
+
+    public void setDocenti(Set<Docente> docenti) {
+        this.docenti = docenti;
     }
 
     @Override
