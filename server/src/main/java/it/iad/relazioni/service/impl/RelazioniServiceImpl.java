@@ -9,6 +9,7 @@ import it.iad.relazioni.repository.AulaRepository;
 import it.iad.relazioni.repository.DocenteRepository;
 import it.iad.relazioni.repository.MerendaRepository;
 import it.iad.relazioni.service.RelazioniService;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -123,6 +124,15 @@ public class RelazioniServiceImpl implements RelazioniService {
 //            });
             d.getAlunni().forEach(a -> System.out.println("\t\t Alunno: " + a.getNome()));
         });
+
+        // partendo dalle merende, recuperare l'alunno associato e stamparne la classe e i docenti
+        merendaRepository.findAll()
+                .forEach(mrn -> {
+                    Alunno alux = mrn.getAlunno();
+                    Aula aula = alux.getAula();
+                    System.out.println("L'alunno " + alux.getNome() + " oggi ha per merenda " + mrn.getDescrizione() + " nell'aula " + aula.getCodice());
+                    alux.getDocenti().forEach(d -> System.out.println("\t\t Docente: " + d.getCognome()));
+                });
     }
 
     private void associaDocenteAlunni(Docente d, Alunno... a) {
@@ -136,6 +146,16 @@ public class RelazioniServiceImpl implements RelazioniService {
             sd.add(d);
             alunnoRepository.save(alu);
         }
+    }
+
+    private void associaAulaAlunni(Aula a, Alunno... alu) {
+        Collection<Alunno> calu = a.getAlunni();
+        for (Alunno alunno : alu) {
+            calu.add(alunno);
+            alunno.setAula(a);
+            alunnoRepository.save(alunno);
+        }
+        aulaRepository.save(a);
     }
 
 }
